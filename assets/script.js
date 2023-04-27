@@ -1,22 +1,25 @@
 // On commence par définir le tableau des slides, qui contient pour chaque slide un objet avec deux propriétés : "image" et "tagLine"
 const slides = [
 	{
-	  "image":"slide1.jpg",
-	  "tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
+	"image":"slide1.jpg",
+	"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
 	},
+
 	{
-	  "image":"slide2.jpg",
-	  "tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
+	"image":"slide2.jpg",
+	"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
 	},
+
 	{
-	  "image":"slide3.jpg",
-	  "tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
+	"image":"slide3.jpg",
+	"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
 	},
+
 	{
-	  "image":"slide4.png",
-	  "tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
+	"image":"slide4.png",
+	"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
-  ];
+]
   
 // Sélection des éléments HTML nécessaires
 const leftArrow = document.querySelector('.arrow_left'); // flèche gauche
@@ -27,7 +30,8 @@ const dotsContainer = document.querySelector('.dots'); // conteneur pour les poi
 
 let currentSlide = 0; // variable pour stocker l'index de l'image actuelle
 
-// Création des points de navigation
+// Création des points de navigation:
+
 for (let i = 0; i < slides.length; i++) {
   const dot = document.createElement('div'); // création d'un élément div pour chaque point
   dot.classList.add('dot'); // ajout de la classe "dot" pour chaque point
@@ -77,12 +81,5 @@ rightArrow.addEventListener('click', function() {
   console.log("Clic sur la flèche droite");
 });
 
-// Ajouter un évènement à la flèche gauche
-leftArrow.addEventListener('click', function() {
-  console.log("Clic sur la flèche gauche");
-});
-// Ajouter un évènement à la flèche droite
-rightArrow.addEventListener('click', function() {
-  console.log("Clic sur la flèche droite");
-});
+
 
